@@ -357,7 +357,7 @@ counts <- LayerData(smerge, assay = "RNA", layer = "counts")
 expressed_gene = rownames(counts)
 rm(counts)
 
-gset_cur <- getGmt("gene_sets.gmt")
+gset_cur <- getGmt("gene_sets_scRNAseq.gmt")
 gset_cur <- subsetGeneSets(gset_cur, expressed_gene) 
 smerge <- AddModuleScore_UCell(smerge, features=geneIds(gset_cur), name=NULL)
 
@@ -823,7 +823,7 @@ counts <- LayerData(smerge, assay = "RNA", layer = "counts")
 expressed_gene = rownames(counts)
 rm(counts)
 
-gset_cur <- getGmt("gene_sets.gmt")
+gset_cur <- getGmt("gene_sets_scRNAseq.gmt")
 gset_cur <- subsetGeneSets(gset_cur, expressed_gene) 
 smerge <- AddModuleScore_UCell(smerge, features=geneIds(gset_cur), name=NULL)
 
